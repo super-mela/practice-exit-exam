@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import VideoThumb from '@/public/images/hero-image.png'
 import ModalVideo from '@/components/modal-video'
 
@@ -22,7 +23,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6">
 
         {/* Hero content */}
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
@@ -37,7 +38,7 @@ export default function Hero() {
                   <a className="btn border-none px-5 py-3 text-white bg-gradient-to-l from-cyan-500 to-blue-500 hover:bg-gradient-to-r from-cyan-500 to-blue-500 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Start Now</a>
                 </div>
                 <div>
-                  <a className="btn border-none px-5 py-3 text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Demo</a>
+                  <Link href="/quiz" className="btn border-none px-5 py-3 text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4">Demo</Link>
                 </div>
               </div>
             </div>

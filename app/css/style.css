@@ -9,6 +9,7 @@
 @import 'additional-styles/Plans.css';
 
 @import 'tailwindcss/utilities';
+/* @import '../../node_modules/semantic-ui-css/semantic.min.css'; */
 
 /* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */
 @layer utilities {
