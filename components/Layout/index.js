@@ -6,8 +6,8 @@ import Header from '../Header';
 const Layout = ({ children }) => {
   return (
     <Fragment>
-      <Header />
-      <main>{children}</main>
+      {/* <Header /> */}
+      <main className='pt-32'>{children}</main>
     </Fragment>
   );
 };
