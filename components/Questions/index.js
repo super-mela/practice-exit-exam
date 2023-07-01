@@ -8,15 +8,6 @@ import {
 
 import Loader from '../Loader'
 
-// import mindImg from '../../images/mind.svg';
-
-import {
-  CATEGORIES,
-  NUM_OF_QUESTIONS,
-  DIFFICULTY,
-  QUESTIONS_TYPE,
-  COUNTDOWN_TIME,
-} from '../../data';
 import { shuffle } from '../utils';
 
 import Offline from '../Offline';
@@ -35,22 +26,40 @@ const Questions = ({ startQuiz }) => {
   const [error, setError] = useState(null);
   const [offline, setOffline] = useState(false);
 
-  const handleTimeChange = (e, { name, value }) => {
-    setCountdownTime({ ...countdownTime, [name]: value });
-  };
+  // const handleTimeChange = (e, { name, value }) => {
+  //   setCountdownTime({ ...countdownTime, [name]: value });
+  // };
 
-  let allFieldsSelected = false;
-  if (
-    category &&
-    numOfQuestions &&
-    difficulty &&
-    questionsType &&
-    (countdownTime.hours || countdownTime.minutes || countdownTime.seconds)
-  ) {
-    allFieldsSelected = true;
+  // let allFieldsSelected = false;
+  // if (
+  //   category &&
+  //   numOfQuestions &&
+  //   difficulty &&
+  //   questionsType &&
+  //   (countdownTime.hours || countdownTime.minutes || countdownTime.seconds)
+  // ) {
+  //   allFieldsSelected = true;
+  // }
+
+  const questionCategories = async () => {
+    const response = await fetch('api/quiz/categories', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ id: 1 }),
+    });
+    const data = await response.json();
+    if (data) {
+      setCategory(data?.category);
+      setNumOfQuestions(data?.numOfQuestions)
+      setDifficulty(data?.difficulty)
+      setQuestionsType(data?.questionsType)
+    }
   }
 
   useEffect(() => {
+    questionCategories();
     fetchData();
   }, [])
 

@@ -1,6 +1,6 @@
 const CATEGORIES = [
   {
-    key: '0',
+    key: 0,
     text: 'Any Category',
     value: '0'
   },
