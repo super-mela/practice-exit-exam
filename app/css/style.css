@@ -17,3 +17,16 @@
         direction: rtl;
     }
 }
+
+.dashboard-link {
+    @apply flex hover:bg-[#F9FAFB] p-2 hover:text-black text-sm font-medium items-center gap-1;
+}
+.tori-input-wrapper {
+    @apply flex items-center border px-2 border-black/20 rounded-sm;
+  }
+  .tori-input {
+    @apply focus:outline-none border px-2 placeholder:text-xs border-black/20 rounded-sm text-black text-sm py-1 w-full;
+  }
+  .tori-btn-secondary {
+    @apply flex items-center gap-1 justify-center bg-black text-white rounded-md px-3 py-[7px] text-sm border border-black hover:bg-white hover:text-black transition-colors delay-[50ms] font-bold cursor-pointer;
+  }

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 const Layout = ({ children }) => {
   return (
     <Fragment>
-      {/* <Header /> */}
       <main className='pt-32'>{children}</main>
     </Fragment>
   );
