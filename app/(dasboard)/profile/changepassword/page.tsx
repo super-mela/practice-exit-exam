@@ -1,26 +1,12 @@
 'use client'
-// import { ErrorMessage } from "@hookform/error-message";
-import React, { useContext, useState } from "react";
-// import { Helmet } from "react-helmet-async";
-// import { useForm } from "react-hook-form";
-// import { toast } from "react-hot-toast";
+import React, { useState } from "react";
 import { AiFillEye, AiTwotoneEyeInvisible } from "react-icons/ai";
 import { RiLockPasswordFill } from "react-icons/ri";
-// import Required from "../../../components/Required/Required";
-// import ValidationError from "../../../components/ValidationError/ValidationError";
-// import { AuthContext } from "../../../Contexts/AuthProvider/AuthProvider";/
+
 
 const ChangePassword = () => {
-    //   const {
-    //     register,
-    //     formState: { errors },
-    //     handleSubmit,
-    //   } = useForm({
-    //     criteriaMode: "all",
-    //   });
-    const [showPassword, setShowPassword] = useState(false);
-    //   const { changePassword } = useContext(AuthContext);
 
+    const [showPassword, setShowPassword] = useState(false);
     const handleChangePassword = () => {
         alert('Password Changed')
         // changePassword(d.password)
@@ -84,23 +70,8 @@ const ChangePassword = () => {
                                 />
                             )}
                         </div>
-                        {/* <ErrorMessage
-              errors={errors}
-              name="password"
-              render={({ messages }) => {
-                return messages
-                  ? Object.entries(messages).map(([type, message]) => (
-                    <ValidationError
-                      key={type}
-                      message={message}
-                    ></ValidationError>
-                  ))
-                  : null;
-              }}
-            /> */}
                     </div>
                 </div>
-
                 <div>
                     <button type="submit" className="tori-btn-secondary">
                         Change Password
