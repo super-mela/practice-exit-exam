@@ -17,11 +17,10 @@ const ChangePassword = () => {
         //   });
     };
     return (
-        <div className="bg-white w-full flex flex-col gap-5 p-5">
-            <h4 className="text-base text-gray-700 font-semibold leading-none">
-                Change Password
-            </h4>
-
+        <div className='pt-[25px] px-[25px] bg-[#F8F9Fc]'>
+            <div className='flex items-center justify-between'>
+                <h1 className='text-[#5a5c69] text-[28px] leading-[34px] font-normal cursor-pointer'>Change Password</h1>
+            </div>
             <form
                 onSubmit={handleChangePassword}
                 className="lg:w-[80%] mx-auto border rounded-md p-5 flex flex-col gap-3 "
