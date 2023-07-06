@@ -74,7 +74,7 @@ const QuizApp = () => {
   };
 
   return (
-    <Layout>
+    <Layout >
       {loading && <Loader />}
       {!loading && !isQuizStarted && !isQuizCompleted && (
         <Questions startQuiz={startQuiz} />

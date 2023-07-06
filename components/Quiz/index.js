@@ -67,11 +67,11 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
   };
 
   return (
-    <Item.Header>
-      <Container>
-        <Segment>
+    <Item.Header >
+      <Container >
+        <Segment >
           <Item.Group divided>
-            <Item>
+            <Item >
               <Item.Content>
                 <Item.Extra>
                   <Header as="h1" block floated="left">

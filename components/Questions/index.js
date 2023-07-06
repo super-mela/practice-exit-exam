@@ -128,7 +128,7 @@ const Questions = ({ startQuiz }) => {
     <>
       {processing ? (<Loader />) :
         <div className='container md:mt-20 md:mb-20 pb-20'>
-          <Item>
+          <Item> 
             <Item.Content>
               {error && (
                 <Message error onDismiss={() => setError(null)}>
