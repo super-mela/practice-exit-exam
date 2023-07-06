@@ -13,8 +13,8 @@ export default function Logo() {
         </defs>
         <rect width="32" height="32" rx="16" fill="url(#footer-logo)" fillRule="nonzero" />
       </svg>
-      <h2 className="h2 m-0 text-black">
-        Exit Exam
+      <h2 className="h2 m-0 text-black text-2xl">
+        Learning Range
       </h2>
     </Link>
   )
