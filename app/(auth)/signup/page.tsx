@@ -1,11 +1,14 @@
-export const metadata = {
-  title: "Sign Up - Simple",
-  description: "Page description",
-};
-
+'use client'
+import { useState } from 'react'
 import Link from "next/link";
-
+import { CATEGORIES } from '../../../data'
 export default function SignUp() {
+  const [value, setValue] = useState('')
+
+  const handleSelect = (e: any) => {
+    setValue(e.target.value);
+  }
+
   return (
     <section className="bg-gradient-to-b from-[#8080800e] to-[#ffffff18]">
       <div
@@ -98,6 +101,42 @@ export default function SignUp() {
                     placeholder="Enter your password"
                     required
                   />
+                </div>
+              </div>
+              <div className="flex items-center my-6">
+                <div
+                  className="border-t border-gray-300 grow mr-3"
+                  aria-hidden="true"
+                ></div>
+                <div className="text-gray-600 italic">Education</div>
+                <div
+                  className="border-t border-gray-300 grow ml-3"
+                  aria-hidden="true"
+                ></div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-4">
+                <div className="w-full px-3">
+                  <label
+                    className="block text-gray-800 text-sm font-medium mb-1"
+                    htmlFor="password"
+                  >
+                    Departiment <span className="text-red-600">*</span>
+                  </label>
+                  <select
+                    className="form-input w-full text-gray-800 border-2 border-[#00000045] p-2 text-sm"
+                    value={value}
+                    onChange={e => handleSelect(e)}
+                  >
+                    {CATEGORIES.map((item) => (
+                      <option key={item.key} value={item.value}>{item.text}</option>
+                    ))}
+                  </select>
+                  {/* <input
+                    id="password"
+                    type="password"
+                    placeholder="Enter your password"
+                    required
+                  /> */}
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mt-6">
