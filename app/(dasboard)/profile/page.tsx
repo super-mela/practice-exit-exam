@@ -117,7 +117,7 @@ function Profile() {
             <div className='flex mt-[22px] w-full gap-[20px]'>
                 <div className='basis-[50%] border bg-white shadow-md cursor-pointer rounded-[4px]'>
                     <div className='bg-[#F8F9FC] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#EDEDED] mb-[20px]'>
-                        <h2>Earnings Overview</h2>
+                        <h2>Progress Overview</h2>
                         <FaEllipsisV color='gray' className='cursor-pointer' />
                     </div>
                     <PieChart width={300} height={300} className='pl-[20px]'>
@@ -137,7 +137,7 @@ function Profile() {
                 </div>
                 <div className='basis-[50%] border bg-white shadow-md cursor-pointer rounded-[4px]'>
                     <div className='bg-[#F8F9FC] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#EDEDED]'>
-                        <h2>Revenu Resources</h2>
+                        <h2>Resources Utilization</h2>
                         <FaEllipsisV color='gray' className='cursor-pointer' />
                     </div>
                     <div >

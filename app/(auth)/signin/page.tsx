@@ -34,7 +34,7 @@ export default function SignIn() {
 
   return (
     <section className="bg-gradient-to-b from-[#8080800e] to-[#ffffff18]">
-            <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1" aria-hidden="true">
+      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1" aria-hidden="true">
         <svg width="1360" height="578" viewBox="0 0 1360 578" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="illustration-01">
@@ -53,8 +53,8 @@ export default function SignIn() {
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
 
           {/* Page header */}
-          <div className="max-w-3xl mx-auto text-left pb-12 md:pb-20">
-            <h1 className="h1 text-xl px-[13vw] ">Welcome back. We exist to make your Future Brighter.</h1>
+          <div className="max-w-sm mx-auto text-left pb-5 md:pb-8">
+            <h1 className="h1 text-xl text-center">Welcome back. We exist to make your Future Brighter.</h1>
           </div>
 
           {/* Form */}

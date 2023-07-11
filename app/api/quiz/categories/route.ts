@@ -12,7 +12,7 @@ type User = {
 }
 
 const userQuiz = [
-    { id: 1, userId: 1, category: "0", numOfQuestions: 10, difficulty: "0", questionsType: "0", countdownTime: "" },
+    { id: 1, userId: 1, category: "0", numOfQuestions: 50, difficulty: "0", questionsType: "0", countdownTime: { hours: 0, minutes: 3000, seconds: 0 } },
 ]
 
 export async function GET(request: Request) {

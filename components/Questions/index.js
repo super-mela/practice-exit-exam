@@ -13,33 +13,10 @@ import { shuffle } from '../utils';
 import Offline from '../Offline';
 
 const Questions = ({ startQuiz }) => {
-  const [category, setCategory] = useState('0');
-  const [numOfQuestions, setNumOfQuestions] = useState(5);
-  const [difficulty, setDifficulty] = useState('0');
-  const [questionsType, setQuestionsType] = useState('0');
-  const [countdownTime, setCountdownTime] = useState({
-    hours: 0,
-    minutes: 120,
-    seconds: 0,
-  });
+
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState(null);
   const [offline, setOffline] = useState(false);
-
-  // const handleTimeChange = (e, { name, value }) => {
-  //   setCountdownTime({ ...countdownTime, [name]: value });
-  // };
-
-  // let allFieldsSelected = false;
-  // if (
-  //   category &&
-  //   numOfQuestions &&
-  //   difficulty &&
-  //   questionsType &&
-  //   (countdownTime.hours || countdownTime.minutes || countdownTime.seconds)
-  // ) {
-  //   allFieldsSelected = true;
-  // }
 
   const questionCategories = async () => {
     const response = await fetch('api/quiz/categories', {
@@ -51,22 +28,17 @@ const Questions = ({ startQuiz }) => {
     });
     const data = await response.json();
     if (data) {
-      setCategory(data?.category);
-      setNumOfQuestions(data?.numOfQuestions)
-      setDifficulty(data?.difficulty)
-      setQuestionsType(data?.questionsType)
+      fetchData(data?.numOfQuestions, data?.category, data?.difficulty, data?.questionsType, data?.countdownTime)
     }
   }
 
   useEffect(() => {
-    questionCategories();
-    fetchData();
+    questionCategories()
   }, [])
 
 
-  const fetchData = () => {
+  const fetchData = (numOfQuestions, category, difficulty, questionsType, countdownTime) => {
     setProcessing(true);
-
     if (error) setError(null);
 
     const API = `https://opentdb.com/api.php?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&type=${questionsType}`;
@@ -128,7 +100,7 @@ const Questions = ({ startQuiz }) => {
     <>
       {processing ? (<Loader />) :
         <div className='container md:mt-20 md:mb-20 pb-20'>
-          <Item> 
+          <Item>
             <Item.Content>
               {error && (
                 <Message error onDismiss={() => setError(null)}>

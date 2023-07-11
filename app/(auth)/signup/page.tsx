@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function SignUp() {
   return (
     <section className="bg-gradient-to-b from-[#8080800e] to-[#ffffff18]">
-            <div
+      <div
         className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1"
         aria-hidden="true"
       >
@@ -38,10 +38,10 @@ export default function SignUp() {
         </svg>
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+        <div className="pt-32 pb-5 md:pt-40 md:pb-20">
           {/* Page header */}
-          <div className="max-w-3xl mx-auto text-left pb-12 md:pb-20">
-            <h1 className="h1 text-xl px-[13vw] ">
+          <div className="max-w-sm mx-auto text-left pb-5 md:pb-8">
+            <h1 className="h1 text-xl text-center">
               Welcome. We exist to make your Future Brighter.
             </h1>
           </div>

@@ -148,7 +148,7 @@ const Main = ({ startQuiz }) => {
               fluid
               selection
               name="category"
-              style={{borderColor: 'black', marginRight: 20}}
+              style={{ boxShadow: '0px 0px 5px lightgray', marginRight: 20 }}
               placeholder="Select Quiz Category"
               header="Select Quiz Category"
               options={CATEGORIES}
@@ -160,7 +160,7 @@ const Main = ({ startQuiz }) => {
             <Dropdown
               fluid
               selection
-              style={{borderColor: 'black', marginRight: 20}}
+              style={{ boxShadow: '0px 0px 5px lightgray', marginRight: 20 }}
               name="numOfQ"
               placeholder="Select No. of Questions"
               header="Select No. of Questions"
@@ -173,7 +173,7 @@ const Main = ({ startQuiz }) => {
             <Dropdown
               fluid
               selection
-              style={{borderColor: 'black', marginRight: 20}}
+              style={{ boxShadow: '0px 0px 5px lightgray', marginRight: 20 }}
               name="difficulty"
               placeholder="Select Difficulty Level"
               header="Select Difficulty Level"
@@ -186,7 +186,7 @@ const Main = ({ startQuiz }) => {
             <Dropdown
               fluid
               selection
-              style={{borderColor: 'black', marginRight: 20}}
+              style={{ boxShadow: '0px 0px 5px lightgray', marginRight: 20 }}
               name="type"
               placeholder="Select Questions Type"
               header="Select Questions Type"
@@ -199,7 +199,7 @@ const Main = ({ startQuiz }) => {
             <Dropdown
               search
               selection
-              style={{borderColor: 'black', marginRight: 20}}
+              style={{ boxShadow: '0px 0px 5px lightgray', marginRight: 20 }}
               name="hours"
               placeholder="Select Hours"
               header="Select Hours"
@@ -211,7 +211,7 @@ const Main = ({ startQuiz }) => {
             <Dropdown
               search
               selection
-              style={{borderColor: 'black', marginRight: 20}}
+              style={{ boxShadow: '0px 0px 5px lightgray', marginRight: 20 }}
               name="minutes"
               placeholder="Select Minutes"
               header="Select Minutes"
@@ -223,7 +223,7 @@ const Main = ({ startQuiz }) => {
             <Dropdown
               search
               selection
-              style={{borderColor: 'black', marginRight: 20}}
+              style={{ boxShadow: '0px 0px 5px lightgray', marginRight: 20 }}
               name="seconds"
               placeholder="Select Seconds"
               header="Select Seconds"
@@ -236,7 +236,7 @@ const Main = ({ startQuiz }) => {
           <Divider />
           <Item.Extra>
             <Button
-              color='green'
+              color='linkedin'
               size="medium"
               icon="play"
               labelPosition="left"
