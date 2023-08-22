@@ -7,16 +7,14 @@ type AUTH = {
 }
 type User = {
     userName: string,
+    email: string,
+    displayedName: string,
     departiment: string,
+    accessToken: string,
     bio?: string,
-}
-const users = [
-    { id: 1, email: 'user@example.com', password: 'password' },
-];
 
-const userInfo = [
-    { id: 1, userId: 1, userName: 'Jhon Don', departiment: "Electrical Enginnering", bio: "sample Bio" },
-]
+}
+
 
 export async function GET(request: Request) {
     return new Response('Hello, Next.js!')
